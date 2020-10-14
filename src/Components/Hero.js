@@ -7,7 +7,7 @@ import '../Modules/colors.scss'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,        
+    flexGrow: 1,            
   },
   paper: {    
     width: '80vw',
@@ -40,7 +40,7 @@ const Hero = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={`hero-root ${classes.root}`}>
       <div className={classes.paper}>
         <Grid className="hero-section" container spacing={2} justify="space-between" alignItems="center">          
           <Grid item md={6} className={classes.heroDesc}>
