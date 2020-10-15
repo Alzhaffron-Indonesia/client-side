@@ -11,16 +11,11 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {        
     width: '90%',
+    margin: '0 auto'
   },
   image: {
     width: 128,
     height: 128,
-  },
-  img: {
-    marginLeft: 'auto',
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
   },
   heroDesc: {
     maxWidth: '90%',
@@ -56,7 +51,7 @@ const Carousel = () => {
               </Grid>                                  
           </Grid>
           <Grid item md={6} className={classes.heroImg}>            
-            <img className={classes.img} alt="complex" src={imgTesti} />            
+            <img className="testi-img" alt="complex" src={imgTesti} />            
           </Grid>
         </Grid>
       </div>

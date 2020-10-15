@@ -101,7 +101,7 @@ nav {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   .hero-detail {
     margin-top: 4em;
   }
@@ -185,9 +185,16 @@ nav {
     background-color: white;
     bottom: 20px;
     p {
-        font-size: 20px !important;
+        font-size: 20px;
     }
 
+}
+
+.testi-img {
+    margin-left: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .arrow-back {    
@@ -231,14 +238,52 @@ nav {
 //     padding: 20px;
 // }
 
-@media(max-width: 768px) {
+@media(max-width: 1203px) {
+    .testi-desc{
+        bottom: 40px;
+        p {
+            font-size: 17px;
+        }
+    }
+}
+@media(max-width: 1100px) {
+    .testi-desc{
+        left: 50px;
+        p {
+            font-size: 16px;
+        }
+    }
+}
+// @media(max-width: 1000px) {
+//     .testi-desc{
+//         bottom: 30px;
+//         p {
+//             font-size: 15px !important;
+//         }
+//     }
+// }
+@media(max-width: 1000px) {
     .carousel-section {
         flex-direction: column-reverse;        
     }
     .testi-desc {
         width: 100%;
-        position: relative;
+        position: static;
+        max-width: 90%;
+        margin: 0 auto;
         left: 0;
+    }
+}
+@media(max-width: 425px) {    
+    .testi-desc {
+        p {
+            font-size: 14px;
+        }
+    }
+    .testi-img {
+        margin: 0 auto;
+        display: block;
+        max-width: 70%;        
     }
 }
 // testi end
