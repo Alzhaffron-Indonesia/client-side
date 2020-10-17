@@ -23,6 +23,11 @@ h3 {
     background-color: $alzhaffron-purple;
   }
 }
+.title-section {    
+    background: url('../Modules/Images/border-title.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;           
+}
 
 // end
 
@@ -160,38 +165,14 @@ nav {
 
 // end
 
-// testi section
+// carousel section
 
-.testi-section {
-    width: 80vw;
-    margin: 0 auto;
-}
 .carousel-section {
     position: relative;
     display: flex;
 }
 
-.testi-desc {
-    text-align: center;
-    background: url('../Modules/Images/testi/bg-testi.png');
-    background-repeat: no-repeat;    
-    background-position: bottom right;    
-    padding: 30px 30px 10px !important;    
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;    
-    max-width: 65%;
-    left: 100px;
-    background-color: white;
-    bottom: 20px;
-    p {
-        font-size: 20px;
-    }
-
-}
-
-.testi-img {
-    margin-left: auto;
+.carousel-img {    
     display: block;
     max-width: 100%;
     max-height: 100%;
@@ -239,7 +220,7 @@ nav {
 // }
 
 @media(max-width: 1203px) {
-    .testi-desc{
+    .carousel-desc{
         bottom: 40px;
         p {
             font-size: 17px;
@@ -247,26 +228,18 @@ nav {
     }
 }
 @media(max-width: 1100px) {
-    .testi-desc{
+    .carousel-desc{
         left: 50px;
         p {
             font-size: 16px;
         }
     }
 }
-// @media(max-width: 1000px) {
-//     .testi-desc{
-//         bottom: 30px;
-//         p {
-//             font-size: 15px !important;
-//         }
-//     }
-// }
 @media(max-width: 1000px) {
     .carousel-section {
         flex-direction: column-reverse;        
     }
-    .testi-desc {
+    .carousel-desc {
         width: 100%;
         position: static;
         max-width: 90%;
@@ -275,7 +248,7 @@ nav {
     }
 }
 @media(max-width: 425px) {    
-    .testi-desc {
+    .carousel-desc {
         p {
             font-size: 14px;
         }
@@ -286,7 +259,69 @@ nav {
         max-width: 70%;        
     }
 }
+// carousel end
+
+// testi section
+
+.testi-section {
+    width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 8em;    
+    .carousel-desc {
+        text-align: center;
+        background: url('../Modules/Images/carousel/bg-testi.png');
+        background-repeat: no-repeat;    
+        background-position: bottom right;    
+        padding: 30px 30px 10px !important;    
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;    
+        max-width: 65%;
+        left: 100px;
+        background-color: white;
+        bottom: 20px;
+        p {
+            font-size: 20px;
+        }
+    
+    }
+    .carousel-img {
+        margin-left: auto;
+    }
+}
+
 // testi end
+
+// definition section
+.definition-section {
+    width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 5em;    
+    .carousel-section {
+        flex-direction: row-reverse;
+    }
+    .carousel-desc {
+        text-align: center;
+        background: url('../Modules/Images/carousel/bg-testi-left.png');
+        background-repeat: no-repeat;    
+        background-position: top left;    
+        padding: 40px 30px 10px 50px !important;    
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;    
+        max-width: 70%;
+        right: 120px;
+        background-color: white;
+        bottom: 50px;
+        p {
+            font-size: 20px;
+        }
+    
+    }
+    
+}
+// definition end
+
 
 // why section
 .why-sec {          
