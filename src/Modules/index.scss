@@ -171,6 +171,16 @@ nav {
     position: relative;
     display: flex;
 }
+.carousel-desc {
+    text-align: center;    
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;            
+    p {
+        font-size: 20px;
+    }
+
+}
 
 .carousel-img {    
     display: block;
@@ -219,46 +229,6 @@ nav {
 //     padding: 20px;
 // }
 
-@media(max-width: 1203px) {
-    .carousel-desc{
-        bottom: 40px;
-        p {
-            font-size: 17px;
-        }
-    }
-}
-@media(max-width: 1100px) {
-    .carousel-desc{
-        left: 50px;
-        p {
-            font-size: 16px;
-        }
-    }
-}
-@media(max-width: 1000px) {
-    .carousel-section {
-        flex-direction: column-reverse;        
-    }
-    .carousel-desc {
-        width: 100%;
-        position: static;
-        max-width: 90%;
-        margin: 0 auto;
-        left: 0;
-    }
-}
-@media(max-width: 425px) {    
-    .carousel-desc {
-        p {
-            font-size: 14px;
-        }
-    }
-    .testi-img {
-        margin: 0 auto;
-        display: block;
-        max-width: 70%;        
-    }
-}
 // carousel end
 
 // testi section
@@ -267,26 +237,79 @@ nav {
     width: 80vw;
     margin: 0 auto;
     margin-bottom: 8em;    
-    .carousel-desc {
-        text-align: center;
-        background: url('../Modules/Images/carousel/bg-testi.png');
+    .carousel-desc {        
+        background: url('../Modules/Images/carousel/bg-testi.png'), white;
         background-repeat: no-repeat;    
         background-position: bottom right;    
-        padding: 30px 30px 10px !important;    
-        display: flex;
-        flex-wrap: wrap;
-        position: absolute;    
+        padding: 30px 30px 20px !important;               
         max-width: 65%;
-        left: 100px;
-        background-color: white;
-        bottom: 20px;
-        p {
-            font-size: 20px;
-        }
-    
+        right: 200px;
+        bottom: 40px;    
     }
     .carousel-img {
         margin-left: auto;
+    }
+}
+
+@media(min-width: 2000px) {
+    .testi-section .carousel-desc{
+        max-width: 55%;
+        left: 250px;
+        right: 0px !important;        
+    }
+    .testi-section .carousel-img {
+        margin: 0 auto;              
+    }
+}
+@media(min-width: 1440px) and (max-width: 2000px) {
+    .testi-section .carousel-desc{
+        right: 0px !important;        
+        left: 32px;
+    }
+    .testi-section .carousel-img {
+        margin: 0 auto;              
+    }
+}
+@media(max-width: 1203px) {
+    .testi-section .carousel-desc{
+        bottom: 40px;
+        p {
+            font-size: 17px;
+        }
+    }
+}
+@media(max-width: 1100px) {
+    .testi-section .carousel-desc{
+        // left: 50px;
+        p {
+            font-size: 16px;
+        }
+    }
+}
+@media(max-width: 1000px) {
+    .testi-section .carousel-section {
+        flex-direction: column-reverse;        
+    }
+    .testi-section .carousel-desc {
+        padding: 30px 40px 30px 20px !important;             
+        width: 100%;
+        position: static;
+        max-width: 90%;
+        margin: 0 auto;
+        right: 0;
+    }
+}
+@media(max-width: 425px) {    
+    .testi-section .carousel-desc {
+        background-size: 30%;
+        p {
+            font-size: 12px;
+        }
+    }
+    .testi-section .carousel-img {
+        margin: 0 auto;
+        display: block;
+        max-width: 70%;        
     }
 }
 
@@ -300,25 +323,56 @@ nav {
     .carousel-section {
         flex-direction: row-reverse;
     }
-    .carousel-desc {
-        text-align: center;
-        background: url('../Modules/Images/carousel/bg-testi-left.png');
+    .carousel-desc {        
+        background: url('../Modules/Images/carousel/bg-testi-left.png'), white;
         background-repeat: no-repeat;    
         background-position: top left;    
-        padding: 40px 30px 10px 50px !important;    
-        display: flex;
-        flex-wrap: wrap;
-        position: absolute;    
+        padding: 40px 30px 10px 50px !important;             
         max-width: 70%;
-        right: 120px;
-        background-color: white;
-        bottom: 50px;
+        left: 200px;        
+        bottom: 50px;     
+    }   
+}
+@media(max-width: 1203px) {
+    .definition-section .carousel-desc{
+        bottom: 40px;
         p {
-            font-size: 20px;
+            font-size: 17px;
         }
-    
     }
-    
+}
+@media(max-width: 1100px) {
+    .definition-section .carousel-desc{
+        left: 50px;
+        p {
+            font-size: 16px;
+        }
+    }
+}
+@media(max-width: 1000px) {    
+    .definition-section .carousel-section {
+        flex-direction: column-reverse;        
+    }
+    .definition-section .carousel-desc {
+        width: 100%;
+        position: static;
+        max-width: 90%;
+        margin: 0 auto;
+        left: 0;
+    }
+}
+@media(max-width: 425px) {    
+    .definition-section .carousel-desc {
+        background-size: 30%;
+        p {
+            font-size: 12px;
+        }
+    }
+    .definition-section .carousel-img {
+        margin: 0 auto;
+        display: block;
+        max-width: 70%;        
+    }
 }
 // definition end
 
@@ -363,23 +417,12 @@ nav {
     width: 65%;
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 978px) {
     .why-img {        
-        grid-template-columns: repeat(2, 1fr);        
+        grid-template-columns: 1fr;        
     }  
     
 }
-@media(max-width: 768px) {
-    .why-img {        
-        grid-template-columns: 1fr 1fr ;        
-    }    
-}
-@media(max-width: 425px) {
-    .why-img {        
-        grid-template-columns: 1fr;        
-    }    
-}
-
 // end
 
 // footer section
@@ -453,18 +496,20 @@ nav {
     padding-bottom: 1em;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 978px) {
     .contact-sec {    
         grid-template-columns: max-content 1fr;    
     }
 }
-@media(max-width: 425px) {
+@media(max-width: 475px) {
     .contact-sec {    
         grid-template-columns: max-content;    
         .find-us {
             margin-left: 0;
         }
     }
+}
+@media(max-width: 425px) {
     .footer-sec {
         background-size: 300px, cover;
     }
