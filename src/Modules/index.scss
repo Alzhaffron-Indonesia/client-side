@@ -175,10 +175,7 @@ nav {
     text-align: center;    
     display: flex;
     flex-wrap: wrap;
-    position: absolute;            
-    p {
-        font-size: 20px;
-    }
+    position: absolute;                
 
 }
 
@@ -233,6 +230,7 @@ nav {
 
 // testi section
 
+
 .testi-section {
     width: 80vw;
     margin: 0 auto;
@@ -245,6 +243,9 @@ nav {
         max-width: 65%;
         right: 200px;
         bottom: 40px;    
+        p {
+            font-size: 20px;
+        }
     }
     .carousel-img {
         margin-left: auto;
@@ -298,6 +299,9 @@ nav {
         margin: 0 auto;
         right: 0;
     }
+    .carousel-img {
+        margin: 0 auto;
+    }
 }
 @media(max-width: 425px) {    
     .testi-section .carousel-desc {
@@ -330,7 +334,10 @@ nav {
         padding: 40px 30px 10px 50px !important;             
         max-width: 70%;
         left: 200px;        
-        bottom: 50px;     
+        bottom: 50px; 
+        p {
+            font-size: 20px;
+        }    
     }   
 }
 @media(max-width: 1203px) {
@@ -503,6 +510,7 @@ nav {
 }
 @media(max-width: 475px) {
     .contact-sec {    
+        justify-items: center;
         grid-template-columns: max-content;    
         .find-us {
             margin-left: 0;
@@ -515,5 +523,360 @@ nav {
     }
     .contact-sec .social-media img {
         margin-right: 5%;
+    }
+}
+
+// end footer section
+
+// login section
+.login-section {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    grid-auto-flow: dense; /* NEW */
+    .testimonial-section {        
+        grid-row: 1;        
+        min-height: 100vh;      
+        display: grid;
+        grid-template-rows: max-content;        
+        .testimonial-brand {
+            width: 55vw;  
+            margin: 1.5em 3em;
+            h5 {
+                font-size: 20px;
+                line-height: 24px;                                
+                letter-spacing: 0.1em;
+            }
+        }
+        .testimonial-desc {            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 3em;
+            .testi-section {
+                width: 55vw;         
+                margin-bottom: 0px;   
+                .carousel-desc {                                        
+                    padding: 30px 30px 20px !important;               
+                    background-size: 3em;
+                    max-width: 75%;
+                    right: 150px;
+                    bottom: 20px;    
+                    p {
+                        font-size: 14.5px;
+                    }
+                }
+                .carousel-img  {
+                    max-width: 70%;
+                }
+            }   
+        }                
+    }
+    .form-section {
+        grid-row: 1;        
+        min-height: 100vh;
+        background: url('../Modules/Images/bg-login.png'), $alzhaffron-dark-blue;
+        background-repeat: no-repeat;    
+        .component-login {
+            align-items: center;            
+            min-height: 100vh;
+            .form-login {
+                padding: 0px 80px 60px;  
+                color: white;
+                flex: 1;
+                .form-title {                    
+                    font-size: 36px;    
+                    font-weight: 700;    
+                    text-align: center;
+                }
+                .btn-login {
+                    background-color: $alzhaffron-purple-3;
+                    font-weight: bold;
+                    padding: 7px 40px;
+                    font-size: 1.1em;
+                    border-radius: 0px;
+                    display: flex;
+                    margin-left: auto;
+                    text-transform: unset;
+                }   
+                .link-text {    
+                    font-size: 16px;
+                    margin-top: 2em;
+                    text-align: center;
+                    a {
+                        color:$alzhaffron-purple;
+                        font-weight: 700;
+                        text-decoration: none;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    .login-section {
+        grid-template-columns: 1fr;        
+        .testimonial-section {
+            grid-row: 2;            
+            min-height: unset;
+            padding: 2em 0 5em;
+            .testimonial-desc {
+                padding-top: 2em;
+                .testi-section {
+                    width: 75vw;         
+                    .carousel-desc {
+                        bottom: 40px;
+                        right: 180px;
+                        background-size: 4em;
+                    }
+                }
+            }
+        }
+        .form-section {
+            grid-row: 1;
+            min-height: unset;
+            padding: 5em 0;
+            .component-login {
+                max-width: 50vw;
+                margin: 0 auto;
+                min-height: unset;
+            }            
+        }
+    }
+}
+
+@media(max-width: 1000px){
+    .login-section {
+        .testimonial-section .testimonial-desc .testi-section .carousel-desc {
+            max-width: 100%;
+        }
+        .form-section {            
+            .component-login {
+                max-width: 80vw;                
+                .form-login {
+                    padding: 0px 40px 50px;
+                }       
+            }                 
+        }
+    }
+}
+@media(max-width: 500px){
+    .login-section{
+        .testimonial-section .testimonial-desc .testi-section .carousel-desc {
+            background-size: 3em;
+            p {
+                font-size: 14px;
+            }
+        }
+        .form-section {            
+            .component-login {
+                .form-login {
+                    padding: 0px 20px 20px;
+                }
+            }            
+        }
+    }
+}
+
+
+// end login section
+
+// register section
+
+.register-section {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    grid-auto-flow: dense; /* NEW */
+    .testimonial-section {        
+        grid-row: 1;        
+        min-height: 100vh;      
+        display: grid;
+        grid-template-rows: max-content;        
+        .testimonial-brand {
+            width: 55vw;  
+            margin: 1.5em 3em;
+            h5 {
+                font-size: 20px;
+                line-height: 24px;                                
+                letter-spacing: 0.1em;
+            }
+        }
+        .testimonial-desc {            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 3em;
+            .testi-section {
+                width: 55vw;         
+                margin-bottom: 0px;   
+                .carousel-desc {                                        
+                    padding: 30px 30px 20px !important;               
+                    background-size: 3em;
+                    max-width: 75%;
+                    right: 150px;
+                    bottom: 20px;    
+                    p {
+                        font-size: 14.5px;
+                    }
+                }
+                .carousel-img  {
+                    max-width: 70%;
+                }
+            }   
+        }                
+    }
+    .form-section {
+        grid-row: 1;        
+        min-height: 100vh;
+        background: url('../Modules/Images/bg-login.png'), $alzhaffron-dark-blue;
+        background-repeat: no-repeat;    
+        .component-regis {
+            align-items: center;            
+            min-height: 100vh;
+            .form-regis {
+                padding: 0px 80px 60px;  
+                color: white;
+                flex: 1;
+                .form-group {
+                    display: flex;
+                    :nth-child(1) {
+                        flex: 1.5;
+                    }
+                    :nth-child(2) {
+                        flex: 1;
+                    }
+                    gap: 5px;
+                }
+                .MuiPaper-root {
+                    background-color: transparent;
+                    .MuiStepIcon-root{
+                        color: transparent;                        
+                    }                                         
+                    .MuiStepIcon-root.MuiStepIcon-completed{
+                        color: $alzhaffron-purple;
+                    }                                         
+                    .MuiStepIcon-root.MuiStepIcon-active {
+                        color: $alzhaffron-purple;                        
+                    }                     
+                    .MuiStepLabel-label {
+                        color: white;
+                    }                 
+                } 
+                .MuiFormGroup-root {
+                    margin-bottom: 0.5em;
+                }
+                .MuiFormGroup-row {
+                    justify-content: center;
+                    .MuiRadio-root {
+                        color: $alzhaffron-white;
+                    }
+                    .MuiRadio-colorPrimary.Mui-checked {
+                        color: $alzhaffron-purple;
+                    }
+
+                }                               
+                .form-info {
+                    font-weight: 300;
+                    font-size: 15px;
+                    color: #FFFFFF;
+                }
+                .form-title {                    
+                    font-size: 36px;    
+                    font-weight: 700;    
+                    text-align: center;
+                    margin-bottom: 0px;
+                }
+                .btn-regis-group {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 1em;
+                    .btn-regis {
+                        background-color: $alzhaffron-cream;
+                        font-weight: bold;
+                        padding: 7px 20px;                        
+                        font-size: 1.1em;
+                        border-radius: 0px;                        
+                        text-transform: unset;
+                    }                                                                                                    
+                }   
+                .link-text {    
+                    font-size: 16px;
+                    margin-top: 2em;
+                    text-align: center;
+                    a {
+                        color:$alzhaffron-cream;
+                        font-weight: 700;
+                        text-decoration: none;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    .register-section{
+        grid-template-columns: 1fr;        
+        .testimonial-section {
+            grid-row: 2;            
+            min-height: unset;
+            padding: 2em 0 5em;
+            .testimonial-desc {
+                padding-top: 2em;
+                .testi-section {
+                    width: 75vw;         
+                    .carousel-desc {
+                        bottom: 40px;
+                        right: 180px;
+                        background-size: 4em;
+                    }
+                }
+            }
+        }
+        .form-section {
+            grid-row: 1;
+            min-height: unset;
+            padding: 5em 0;
+            .component-regis {
+                max-width: 50vw;
+                margin: 0 auto;
+                min-height: unset;
+            }            
+        }
+    }
+}
+
+@media(max-width: 1000px){
+    .register-section {
+        .testimonial-section .testimonial-desc .testi-section .carousel-desc {
+            max-width: 100%;
+        }
+        .form-section {            
+            .component-regis {
+                max-width: 80vw;                
+                .form-regis {
+                    padding: 0px 40px 50px;
+                }       
+            }                 
+        }
+    }
+}
+@media(max-width: 500px){
+    .register-section{
+        .testimonial-section .testimonial-desc .testi-section .carousel-desc {
+            background-size: 3em;
+            p {
+                font-size: 14px;
+            }
+        }
+        .form-section {            
+            .component-regis {
+                .form-regis {
+                    padding: 0px 20px 20px;
+                }
+            }            
+        }
     }
 }
