@@ -880,3 +880,224 @@ nav {
         }
     }
 }
+
+// end register section
+
+// register reseller section
+.register-reseller-section {
+    display: grid;
+    grid-template-columns: 1fr;        
+    .form-section {    
+        width: 80%;        
+        min-height: 100vh;
+        margin: 0 auto;
+        background: url('../Modules/Images/bg-login.png'), $alzhaffron-dark-blue;
+        background-repeat: no-repeat;    
+        .title {
+            color: $alzhaffron-white;
+            text-align: center;
+        }
+        .component-reg-reseller {
+            align-items: center;            
+            margin-top: 3em;    
+            padding: 0px 2em;
+            color: white;
+            .form-reg-reseller {            
+                grid-gap: 2.5em;
+                .form-group-reg-reseller {                
+                    flex: 1;
+                    .form-title {                    
+                        font-size: 16px;    
+                        font-weight: 700;    
+                        text-align: center;
+                    }   
+                    .form-group {
+                        display: flex;
+                        :nth-child(1) {
+                            flex: 1.5;
+                        }
+                        :nth-child(2) {
+                            flex: 1;
+                        }
+                        gap: 5px;
+                    }   
+                    .textarea-input {
+                        width: 92%;
+                        padding: 10px 12px;
+                        border-radius: 8px;                        
+                    }                                  
+                }
+                .input-file {
+                    .MuiButton-contained {
+                        background-color: $alzhaffron-white;                        
+                        margin-bottom: 1rem;
+                    }
+                    .MuiButton-root {
+                        padding: 10px 14px;
+                        width: 100%;                        
+                    }
+                    .MuiButtonBase-root {
+                        justify-content: flex-end;
+                    }
+                }
+            }
+            .btn {
+                background-color: $alzhaffron-purple-3;
+                font-weight: bold;
+                padding: 7px 40px;
+                font-size: 1.1em;
+                border-radius: 0px;
+                display: flex;
+                margin: 0 auto;
+                text-transform: unset;
+            }  
+            .link-text {    
+                font-size: 16px;
+                margin-top: 2em;
+                text-align: center;
+                a {
+                    color:$alzhaffron-purple;
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+                
+            } 
+        }
+    }
+}
+
+// end
+
+// product section
+.product-section {
+    width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 5em;    
+    .carousel-section {
+        flex-direction: row-reverse;
+    }
+    .carousel-desc {        
+        background: url('../Modules/Images/carousel/bg-testi-left.png'), white;
+        background-repeat: no-repeat;    
+        background-position: top left;    
+        padding: 30px 30px 30px 85px !important;
+        max-width: 70%;
+        left: 200px;        
+        bottom: 50px; 
+        text-align: left;
+        .MuiTypography-h6 {
+            font-weight: bold;
+            color: $alzhaffron-purple;
+        }
+        p {
+            font-size: 16px;
+            font-weight: lighter;
+        }    
+    } 
+    .form-product {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        gap: 3em;
+        .quantity-section {
+            display: flex;
+            align-items: center;
+            .btn-increment, .btn-decrement {
+                padding: 1px 6px !important;
+                font-size: 18px;
+                background-color: $alzhaffron-dark-blue;
+                border: none;
+                color: $alzhaffron-white;
+            }
+            .btn-decrement {
+                padding: 1px 9px !important;
+            }
+            .desc {
+                display: flex;
+                margin: 0px 1em;
+                align-items: center;
+                .title {
+                    background-color: $alzhaffron-dark-blue;
+                    color: $alzhaffron-white;
+                    padding: 7px 20px;
+                    font-size: 20px;
+                }
+                .total {
+                    background-color: $alzhaffron-purple-3;
+                    color: $alzhaffron-white;
+                    padding: 7px 10px;
+                    font-size: 20px;   
+                    display: flex;                 
+                    align-items: center;
+                    gap: 0.5em;
+                    input {
+                        width: 2.5em;
+                        text-align: center;                                            
+                        font-size: 18px;
+                        font-weight: bold;
+                        border: none;
+                    }
+                    p {
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+
+        .btn-product {
+            background-color: $alzhaffron-purple;
+            color: $alzhaffron-white;
+            font-weight: bold;
+            padding: 7px 40px;
+            font-size: 1.1em;
+            border-radius: 0px;
+            display: flex;
+            margin-left: auto;
+            text-transform: unset;
+        } 
+        .btn-product:hover {
+            background-color: $alzhaffron-dark-blue;
+        }
+    }  
+}
+@media(max-width: 1203px) {
+    .product-section .carousel-desc{
+        bottom: 40px;
+        p {
+            font-size: 17px;
+        }
+    }
+}
+@media(max-width: 1100px) {
+    .product-section .carousel-desc{
+        left: 50px;
+        p {
+            font-size: 16px;
+        }
+    }
+}
+@media(max-width: 1000px) {    
+    .product-section .carousel-section {
+        flex-direction: column-reverse;        
+    }
+    .product-section .carousel-desc {
+        width: 100%;
+        position: static;
+        max-width: 90%;
+        margin: 0 auto;
+        left: 0;
+    }
+}
+@media(max-width: 425px) {    
+    .product-section .carousel-desc {
+        background-size: 30%;
+        p {
+            font-size: 14px;
+        }
+    }
+    .product-section .carousel-img {
+        margin: 0 auto;
+        display: block;
+        max-width: 70%;        
+    }
+}

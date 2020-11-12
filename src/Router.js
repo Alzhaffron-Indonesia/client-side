@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { Landing, Login, Register } from './Containers/Index'
+import { Landing, Login, Register, RegisterReseller, Store } from './Containers/Index'
 import { Provider as ReduxProvider } from 'react-redux'
 import configStore from './Modules/Redux/Store'
 import './Modules/index.scss';
@@ -18,6 +18,8 @@ const Router = () => {
                     <Route exact path={ROUTES.LANDING} component={Landing} />
                     <Route exact path={ROUTES.LOGIN} component={Login} />
                     <Route exact path={ROUTES.REGISTER} component={Register} />
+                    <Route exact path={ROUTES.REGISTERRESELLER} component={RegisterReseller} />
+                    <Route exact path={ROUTES.STORE} component={Store} />
                 </Switch>
             </BrowserRouter>
             </ReduxProvider>

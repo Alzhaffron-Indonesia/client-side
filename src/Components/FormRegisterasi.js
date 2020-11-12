@@ -100,11 +100,9 @@ function getStepContent(step) {
     case 1:
       return (
         <div>
-            <Field type="text" name="email" component={renderField} label="Nomor KTP" />                                
-            <Field type="text" name="password" component={renderField} label="Unggah Foto KTP" />                                                                                                                                       
+            <Field type="text" name="email" component={renderField} label="Nomor KTP" />                                            
             <Field type="text" name="password" component={renderField} label="Nomor Rekening" />                                                                                                                                       
-            <Field type="text" name="password" component={renderField} label="Nama Bank" />                                                                                                                                       
-            <Field type="text" name="password" component={renderField} label="Unggah Buku Tabungan" />                                                                                                                                       
+            <Field type="text" name="password" component={renderField} label="Nama Bank" />                                                                                                                                                   
         </div>
       );
     case 2:

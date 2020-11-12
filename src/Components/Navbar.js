@@ -1,5 +1,5 @@
 import React from 'react'
-import imgLogo from '../Modules/Images/logo.png'
+import imgLogo from '../Modules/Images/logo.png';
 import { FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
     const [showHamburgerMenu, setShowHamburgerMenu] = React.useState(false)
