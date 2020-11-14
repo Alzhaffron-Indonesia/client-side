@@ -6,7 +6,7 @@ import configStore from './Modules/Store';
 import './Modules/index.scss';
 import './Modules/fonts.scss';
 
-const reduxStore = configStore(window.REDUX_INITIAL_DATA);
+const reduxStore = configStore(window.REDUX_INITIAL_DATA)
 const ROUTES = require('./Constants/Routes');
 
 const Router = () => {

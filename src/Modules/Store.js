@@ -5,7 +5,7 @@ import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 
 //reducers
-import UserReducer from './Reducers/UserReducer'
+import UserReducer from './Redux/Reducers/UserReducer'
 
 const reducer = combineReducers({
     user: UserReducer,
