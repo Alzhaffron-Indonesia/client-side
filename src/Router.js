@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Landing, Login, Register, RegisterReseller, Store } from './Containers/Index';
 import { Provider as ReduxProvider } from 'react-redux';
-import configStore from './Modules/Redux/Store';
+import configStore from './Modules/Store';
 import './Modules/index.scss';
 import './Modules/fonts.scss';
 
