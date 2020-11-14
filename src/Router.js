@@ -15,8 +15,8 @@ const Router = () => {
             {/* <ReduxProvider store={reduxStore}> */}
             <BrowserRouter>
                 <Switch>
-                    <Route exact path={ROUTES.LANDING} component={Login} />
-                    <Route exact path="/login" component={Login} />
+                    <Route exact path="/" component={Login} />
+                    <Route exact path="/login" component={Landing} />
                     <Route exact path="/register" component={Register} />
                     <Route exact path={ROUTES.REGISTERRESELLER} component={RegisterReseller} />
                     <Route exact path={ROUTES.STORE} component={Store} />
