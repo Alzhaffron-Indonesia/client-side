@@ -1,13 +1,13 @@
-import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { Landing, Login, Register, RegisterReseller, Store } from './Containers/Index'
-import { Provider as ReduxProvider } from 'react-redux'
-import configStore from './Modules/Redux/Store'
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Landing, Login, Register, RegisterReseller, Store } from './Containers/Index';
+import { Provider as ReduxProvider } from 'react-redux';
+import configStore from './Modules/Redux/Store';
 import './Modules/index.scss';
 import './Modules/fonts.scss';
 
-const reduxStore = configStore(window.REDUX_INITIAL_DATA)
-const ROUTES = require('./Constants/Routes')
+const reduxStore = configStore(window.REDUX_INITIAL_DATA);
+const ROUTES = require('./Constants/Routes');
 
 const Router = () => {
     return (

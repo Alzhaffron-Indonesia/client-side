@@ -11,7 +11,7 @@ const reducer = combineReducers({
     user: UserReducer,
 })
 
-export default function configureStore(initialState) {
+export default function configStore(initialState) {
     const store = createStore(reducer, initialState, compose(applyMiddleware(logger), applyMiddleware(thunk)))
     return store;
 }
