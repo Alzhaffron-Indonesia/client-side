@@ -6,7 +6,7 @@ const Navbar = () => {
     const onClick = () => showHamburgerMenu ? setShowHamburgerMenu(false) : setShowHamburgerMenu(true)
     return (
         <header>
-            <div class="jumbotron">
+            <div className="jumbotron">
                 <img alt="complex" src={imgLogo} />
                 <h1>Alzhaffron Indonesia</h1>
             </div>
@@ -21,7 +21,7 @@ const Navbar = () => {
             </nav> */}
 
             <nav id="scrl">
-                <div class="icon-menu">
+                <div className="icon-menu">
                     {
                         showHamburgerMenu ?
                         <FaTimes size={30} onClick={onClick} />:

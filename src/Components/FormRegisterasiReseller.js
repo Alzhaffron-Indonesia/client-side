@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { reduxForm, Field } from "redux-form";
 import { purple } from '@material-ui/core/colors';
 import { Link } from 'react-router-dom';
-import { Button, Checkbox, Grid, IconButton, Typography } from '@material-ui/core';
+import { Button, Checkbox, Grid, Typography } from '@material-ui/core';
 import {
     fade,    
     withStyles,    

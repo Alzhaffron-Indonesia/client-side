@@ -5,6 +5,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 import configStore from './Modules/Store';
 import './Modules/index.scss';
 import './Modules/fonts.scss';
+import LoginContainer from './Containers/LoginContainer';
 
 const reduxStore = configStore(window.REDUX_INITIAL_DATA)
 const ROUTES = require('./Constants/Routes');
@@ -16,7 +17,7 @@ const Router = () => {
             <BrowserRouter>
                 <Switch>
                     <Route exact path={ROUTES.LANDING} component={Landing} />
-                    <Route exact path={ROUTES.LOGIN} component={Login} />
+                    <Route exact path={ROUTES.LOGIN} component={LoginContainer} />
                     <Route exact path={ROUTES.REGISTER} component={Register} />
                     <Route exact path={ROUTES.REGISTERRESELLER} component={RegisterReseller} />
                     <Route exact path={ROUTES.STORE} component={Store} />
