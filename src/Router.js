@@ -5,6 +5,7 @@ import './Modules/index.scss';
 import './Modules/fonts.scss';
 import LoginContainer from './Containers/LoginContainer';
 
+const ROUTES = require('./Constants/Routes');
 
 const Router = () => {
     return (
