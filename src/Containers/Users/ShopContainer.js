@@ -4,7 +4,7 @@ import { Footer, Hero, Navbar, ProductDetail } from '../../Components/Index'
 import imgSaffron from '../../Modules/Images/carousel/saffron.png'
 
 
-const StoreContainer = () => {    
+const ShopContainer = () => {    
     let descCarousel = {
         textDefinisi: "Safron termasuk salah satu rempah-rempah yang paling banyak dicari orang di dunia. Meski harganya lumayan mahal, tetapi dalam pengobatan tradisional, safron banyak digunakan sebagai obat untuk berbagai macam penyakit.",
         name: "",
@@ -33,4 +33,4 @@ const StoreContainer = () => {
     )
 }
 
-export default StoreContainer;
+export default ShopContainer;

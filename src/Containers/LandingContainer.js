@@ -58,7 +58,7 @@ const LandingContainer = () => {
             <Navbar />
             <Hero />     
             <Typography className="font-lato" style={{marginTop: '2em', fontWeight: 'bold', textAlign: 'center'}} variant="h4" gutterBottom>
-                <span className="title-section">Testimonial</span>
+                <span className="title-section">Testimonial Alzhaffron</span>
             </Typography>          
             <Slider {...settings} className="testi-section">
                 <div>
