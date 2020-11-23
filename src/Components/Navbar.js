@@ -1,6 +1,7 @@
 import React from 'react'
 import imgLogo from '../Modules/Images/logo.png';
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [showHamburgerMenu, setShowHamburgerMenu] = React.useState(false)
     const onClick = () => showHamburgerMenu ? setShowHamburgerMenu(false) : setShowHamburgerMenu(true)
@@ -30,11 +31,9 @@ const Navbar = () => {
                 </div>                
                 <div class="menu">
                     <ul className={showHamburgerMenu ? 'showing' : ''} id="list-menu">
-                        <li className="bg-biru"><a href="https://github.com/alfi2811">Beranda</a></li>
-                        <li className="bg-biru"><a href="#serv">Toko</a></li>
-                        <li className="bg-biru"><a href="#serv">Registrasi</a></li>
-                        <li className="bg-biru"><a href="#serv">Testimonial</a></li>
-                        <li className="bg-biru"><a href="#serv">Kontak</a></li>
+                        <li className="bg-biru"><Link to="/"> <span> Beranda</span></Link></li>                    
+                        <li className="bg-biru"><Link to="/register"> <span> Registrasi</span></Link></li>                        
+                        <li className="bg-biru"><Link to="/contact"> <span> Kontak</span></Link></li>
                     </ul>
                 </div>
             </nav>

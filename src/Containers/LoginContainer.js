@@ -1,6 +1,7 @@
 import Slider from "react-slick";
-import React from 'react'
-import { Carousel, FormLogin } from '../Components/Index'
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux'
+import { Carousel, FormLogin, Loading } from '../Components/Index'
 import arrBack from "../Modules/Images/carousel/ArrowBack.png";
 import arrNext from "../Modules/Images/carousel/ArrowNext.png";
 import imgTesti from '../Modules/Images/carousel/1.png'
@@ -30,7 +31,11 @@ function SampleNextArrow(props) {
     );
   }
 
-const LoginContainer = () => {
+const LoginContainer = (props) => {    
+    const { loading } = props;
+    useEffect(() => {
+        console.log(loading)
+    });
     const settings = {
         dots: true,
         infinite: true,
@@ -47,36 +52,49 @@ const LoginContainer = () => {
         asal: "S1 Ilmu Komputer, Universitas Indonesia"
     } 
     return (
-        <div className="login-section">
-            <div className="testimonial-section">                
-                <div className="testimonial-brand">
-                    <Typography container className="font-lato" style={{fontWeight: 'bold'}} variant="h5" gutterBottom>
-                        <span>Alzhaffron Indonesia</span>
-                    </Typography> 
-                </div>
-                <div className="testimonial-desc">
-                    <Typography className="font-lato" style={{fontWeight: 'bold', textAlign: 'center'}} variant="h4" gutterBottom="1">
-                        <span className="title-section">Testimonial</span>
-                    </Typography> 
-                    <Slider {...settings} className="testi-section">
-                        <div>
-                            <Carousel imgCarousel={imgTesti} titleClass="testi-desc" {...descCarousell}  />            
+        <div>            
+                <div className="login-section">
+                    <div className="testimonial-section">                
+                        <div className="testimonial-brand">
+                            <Typography container className="font-lato" style={{fontWeight: 'bold'}} variant="h5" gutterBottom>
+                                <span>Alzhaffron Indonesia</span>
+                            </Typography> 
                         </div>
-                        <div>
-                            <Carousel imgCarousel={imgTesti} titleClass="testi-desc" {...descCarousell} />            
-                        </div>
-                        <div>
-                            <Carousel imgCarousel={imgTesti} titleClass="testi-desc" {...descCarousell} />            
-                        </div>
-                    </Slider> 
-                </div>                
-                
-            </div>
-            <div className="form-section">
-                <FormLogin />
-            </div>
-        </div>
+                        <div className="testimonial-desc">
+                            <Typography className="font-lato" style={{fontWeight: 'bold', textAlign: 'center'}} variant="h4" gutterBottom="1">
+                                <span className="title-section">Testimonial</span>
+                            </Typography> 
+                            <Slider {...settings} className="testi-section">
+                                <div>
+                                    <Carousel imgCarousel={imgTesti} titleClass="testi-desc" {...descCarousell}  />            
+                                </div>
+                                <div>
+                                    <Carousel imgCarousel={imgTesti} titleClass="testi-desc" {...descCarousell} />            
+                                </div>
+                                <div>
+                                    <Carousel imgCarousel={imgTesti} titleClass="testi-desc" {...descCarousell} />            
+                                </div>
+                            </Slider> 
+                        </div>                
+                        
+                    </div>
+                    <div className="form-section">
+                        <FormLogin />
+                    </div>                    
+                </div>  
+                {
+                        loading ?
+                        <Loading />
+                        :
+                        ''
+                    }             
+        </div>        
     )
 }
-
-export default LoginContainer
+const mapStateToProps = state => {
+    return {
+        loading: state.user.loading,
+        // error: state.user.error,
+    }
+}
+export default connect(mapStateToProps, null)(LoginContainer)

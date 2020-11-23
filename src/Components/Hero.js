@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import imgHero from '../Modules/Images/heroImg.png';
 import '../Modules/colors.scss'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,8 +54,8 @@ const Hero = () => {
                     Menjadi Reseller produk kami dan hasilkan keuntungan hingga jutaan rupiah setiap bulannya.
                 </Typography>
                 <Grid className="btn-hero" >
-                    <button>Pelajari Selengkapnya</button>
-                    <button >Registrasi</button>
+                    <button><Link to="/policy">Pelajari Selengkapnya</Link></button>
+                    <button><Link to="/register">Registrasi</Link></button>
                 </Grid>                
               </Grid>              
             </Grid>            

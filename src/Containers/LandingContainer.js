@@ -58,7 +58,7 @@ const LandingContainer = () => {
             <Navbar />
             <Hero />     
             <Typography className="font-lato" style={{marginTop: '2em', fontWeight: 'bold', textAlign: 'center'}} variant="h4" gutterBottom>
-                <span className="title-section">Testimonial Alzhaffron</span>
+                <span className="title-section">Testimonial</span>
             </Typography>          
             <Slider {...settings} className="testi-section">
                 <div>
@@ -74,7 +74,7 @@ const LandingContainer = () => {
             <Typography className="font-lato" style={{marginTop: '2em', fontWeight: 'bold', textAlign: 'center'}} variant="h4" gutterBottom>
                 <span className="title-section">Apa Itu Saffron ?</span>                
             </Typography>                                   
-            <Slider {...settings} className="definition-section">
+            <Slider id="testi" {...settings} className="definition-section">
                 <div>
                     <Carousel imgCarousel={imgSaffron} titleClass="testi-desc" {...descCarousel} />            
                 </div>

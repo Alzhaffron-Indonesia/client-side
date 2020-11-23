@@ -1,10 +1,11 @@
 import Slider from "react-slick";
 import React from 'react'
-import { Carousel, FormRegisterasi } from '../Components/Index'
+import { Carousel, FormRegisterasi, Loading } from '../Components/Index'
 import arrBack from "../Modules/Images/carousel/ArrowBack.png";
 import arrNext from "../Modules/Images/carousel/ArrowNext.png";
 import imgTesti from '../Modules/Images/carousel/1.png'
 import { Typography } from "@material-ui/core";
+import { connect } from "react-redux";
 
 function SampleNextArrow(props) {
     const { onClick } = props;
@@ -30,7 +31,8 @@ function SampleNextArrow(props) {
     );
   }
 
-const RegisterContainer = () => {
+const RegisterContainer = (props) => {
+    const { loading } = props;
     const settings = {
         dots: true,
         infinite: true,
@@ -47,36 +49,50 @@ const RegisterContainer = () => {
         asal: "S1 Ilmu Komputer, Universitas Indonesia"
     } 
     return (
-        <div className="register-section">
-            <div className="testimonial-section">                
-                <div className="testimonial-brand">
-                    <Typography container className="font-lato" style={{fontWeight: 'bold'}} variant="h5" gutterBottom>
-                        <span>Alzhaffron Indonesia</span>
-                    </Typography> 
+        <div>
+            <div className="register-section">
+                <div className="testimonial-section">                
+                    <div className="testimonial-brand">
+                        <Typography container className="font-lato" style={{fontWeight: 'bold'}} variant="h5" gutterBottom>
+                            <span>Alzhaffron Indonesia</span>
+                        </Typography> 
+                    </div>
+                    <div className="testimonial-desc">
+                        <Typography className="font-lato" style={{fontWeight: 'bold', textAlign: 'center'}} variant="h4" gutterBottom="1">
+                            <span className="title-section">Testimonial</span>
+                        </Typography> 
+                        <Slider {...settings} className="testi-section">
+                            <div>
+                                <Carousel imgCarousel={imgTesti} titleClass="testi-desc" {...descCarousell}  />            
+                            </div>
+                            <div>
+                                <Carousel imgCarousel={imgTesti} titleClass="testi-desc" {...descCarousell} />            
+                            </div>
+                            <div>
+                                <Carousel imgCarousel={imgTesti} titleClass="testi-desc" {...descCarousell} />            
+                            </div>
+                        </Slider> 
+                    </div>                
+                    
                 </div>
-                <div className="testimonial-desc">
-                    <Typography className="font-lato" style={{fontWeight: 'bold', textAlign: 'center'}} variant="h4" gutterBottom="1">
-                        <span className="title-section">Testimonial</span>
-                    </Typography> 
-                    <Slider {...settings} className="testi-section">
-                        <div>
-                            <Carousel imgCarousel={imgTesti} titleClass="testi-desc" {...descCarousell}  />            
-                        </div>
-                        <div>
-                            <Carousel imgCarousel={imgTesti} titleClass="testi-desc" {...descCarousell} />            
-                        </div>
-                        <div>
-                            <Carousel imgCarousel={imgTesti} titleClass="testi-desc" {...descCarousell} />            
-                        </div>
-                    </Slider> 
-                </div>                
-                
+                <div className="form-section">
+                    <FormRegisterasi />
+                </div>
             </div>
-            <div className="form-section">
-                <FormRegisterasi />
-            </div>
+
+            {
+                        loading ?
+                        <Loading />
+                        :
+                        ''
+                    }  
         </div>
     )
 }
+const mapStateToProps = state => {
+    return {
+        loading: state.user.loading, 
+    }
+}
 
-export default RegisterContainer
+export default connect(mapStateToProps, null)(RegisterContainer)

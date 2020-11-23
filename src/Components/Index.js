@@ -8,6 +8,7 @@ import FormLogin from './FormLogin'
 import FormRegister from './FormRegister'
 import FormRegisterasi from './FormRegisterasi'
 import FormRegisterasiReseller from './FormRegisterasiReseller'
+import Loading from './Loading'
 
 export {
     Navbar,
@@ -19,5 +20,6 @@ export {
     FormRegister,
     FormRegisterasi,
     FormRegisterasiReseller,
-    ProductDetail
+    ProductDetail,
+    Loading
 }

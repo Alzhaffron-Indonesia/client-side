@@ -7,11 +7,14 @@ h3 {
 
 .btn-hero {
   button {
-    padding: 5px 15px;
-    color: $alzhaffron-white;
+    padding: 5px 15px;    
     border: 0px;
     font-size: 19px;
     font-weight: 600;
+    a {
+        color: $alzhaffron-white;
+        text-decoration: none;
+    }
   }
   button:first-child {
     background-color: $alzhaffron-black-2;
@@ -787,6 +790,18 @@ nav {
                     text-align: center;
                     margin-bottom: 0px;
                 }
+                .date-input input {
+                    width: 100%;
+                    border: 1px solid #ced4da;
+                    padding: 10px 12px;
+                    position: relative;
+                    font-size: 16px;
+                    transition: border-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                    font-family: -apple-system,"Lato";
+                    border-radius: 4px;
+                    margin-bottom: 1rem;
+                    background-color: #fff;
+                }
                 .btn-regis-group {
                     display: flex;
                     justify-content: flex-end;
@@ -1100,4 +1115,18 @@ nav {
         display: block;
         max-width: 70%;        
     }
+}
+
+//end
+
+// on going comp
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.not-found-container h1 {
+    font-size: 60px;
+    text-align: center;
 }

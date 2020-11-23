@@ -1,8 +1,16 @@
 import React from 'react';
 import { FormRegisterasiReseller } from '../../Components/Index';
+import swal from 'sweetalert';
 import imgLogo from '../../Modules/Images/logo.png';
 
 const RegisterResellerContainer = () => {
+    const handleSubmit = (data) => {
+        swal({                
+            title: "Page on Progress",
+            icon: 'error',
+            button: "Okay!",
+        })
+    }
     return (
         <div className="register-reseller-section">
             <div class="jumbotron">
@@ -11,7 +19,7 @@ const RegisterResellerContainer = () => {
             </div>
             <div className="form-section">
                 <h1 className="title">Formulir Menjadi Reseller</h1>
-                <FormRegisterasiReseller />
+                <FormRegisterasiReseller onSubmit={(data) => handleSubmit(data)} />
             </div>
         </div>
     )

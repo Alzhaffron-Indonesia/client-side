@@ -76,8 +76,7 @@ const FormRegisterasiReseller = (props) => {
         const [state, setState] = useState({
             checkedRules: false,
           });
-        const handleChange = (event) => {
-            console.log("ANJAY")
+        const handleChange = (event) => {            
             setState({ ...state, [event.target.name]: event.target.checked });
         };
         return (

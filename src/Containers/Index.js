@@ -3,6 +3,7 @@ import Login from './LoginContainer'
 import Register from './RegisterContainer'
 import RegisterReseller from './Users/RegisterResellerContainer'
 import Shop from './Users/ShopContainer'
+import Notfound from './NotFoundContainer'
 
 
 export {
@@ -10,5 +11,6 @@ export {
     Login,
     Register,
     RegisterReseller,
-    Shop
+    Shop,
+    Notfound
 }

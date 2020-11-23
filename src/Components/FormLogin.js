@@ -1,13 +1,15 @@
-import React, { Component } from 'react'
-import { reduxForm, Field } from "redux-form";
-
+import React, { useState } from 'react'
+import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import { Button, Grid } from '@material-ui/core';
 import {
     fade,    
     withStyles,    
   } from '@material-ui/core/styles';
-  import InputBase from '@material-ui/core/InputBase';
+import InputBase from '@material-ui/core/InputBase';
+import userAction from '../Modules/Redux/Action/User';
+import { useHistory } from "react-router-dom";
+
 
 const BootstrapInput = withStyles((theme) => ({
     root: {
@@ -38,54 +40,49 @@ const BootstrapInput = withStyles((theme) => ({
     },
   }))(InputBase);
 
-const renderField = ({
-    input,
-    type,
-    placeholder,
-    label,
-    disabled,    
-    readOnly,
-    meta: { touched, error, warning },
-}) => (
-    <div>               
-            <BootstrapInput type={type} placeholder={label} id="bootstrap-input" />
-            {touched &&
-                    ((error && <p style={{ color: "red", marginBottom: "0px" }}>{error} </p>) ||
-                        (warning && <p style={{ color: "brown" }}>{warning} </p>))
-            } 
-    </div>                             
-    )
 
-class FormLogin extends Component {    
-    render(){
-        return (
-            <div className="font-lato" >
-                <form onSubmit={this.props.handleSubmit} >
+const FormLogin = (props) => {
+  let history = useHistory();
+  const [state, setState] = useState({    
+    email: null,
+    password: null
+  })
+  const onChange = (e) => {
+    setState({ ...state, [e.target.id]: e.target.value.toString() })
+  }
+  const onSubmit = async () => {
+    await props.login(state, history)
+  }
+
+  return (
+    <div>
+        <div className="font-lato" >                                
                     <Grid container className="component-login mx-auto mt-5">
                         <div className="form-login">
-                            <p className="form-title">Masuk</p>                              
-
-                            <Field type="text" name="email" component={renderField} label="Email" />                                
-                            <Field type="password" name="password" component={renderField} label="Password" />                                                                                                                           
-                            <Button variant="contained" className="btn-login font-lato" type="submit" disabled={this.props.submitting}>
+                            <p className="form-title">Masuk</p>        
+                            <div>
+                              <BootstrapInput type="email" id="email" value={state.email} onChange={onChange} placeholder="Email" />                        
+                            </div>
+                            <div>
+                              <BootstrapInput type="password" id="password" value={state.password} onChange={onChange} placeholder="Password" />                        
+                            </div>
+                            <Button variant="contained" className="btn-login font-lato" onClick={onSubmit}>
                                 Masuk
                             </Button>
-                            <p className="link-text mt-4">Belum terdaftar? Yuk <Link to="/"> <span> Registrasi </span>
+                            <p className="link-text mt-4">Belum terdaftar? Yuk <Link to="/register"> <span> Registrasi </span>
                                 </Link></p>
                                 
                         </div>                        
-                    </Grid>
-                </form>
+                    </Grid>                
             </div>
-        )
-    }            
+    </div>
+  )
 }
 
-FormLogin = reduxForm({
-    form: "formLoginUser",
-    enableReinitialize: true,
-    validate: false,   
-})(FormLogin);
+const mapDispatchToProps = dispatch => {
+  return {
+      login: (userData, history) => dispatch(userAction.login(userData, history)),      
+  }
+}
 
-
-export default FormLogin;
+export default connect(null, mapDispatchToProps)(FormLogin)

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 import imgLogo from '../Modules/Images/whiteLogo.png'
 
 const Footer = () => {
@@ -22,8 +22,8 @@ const Footer = () => {
                 </div>
                 <div class="find-us">                
                     <h1>Temuin Kami di</h1>
-                    <p><FaWhatsapp size={30} /> 0813 5138 4402</p>
-                    <p><FaWhatsapp size={30} /> 0813 5138 4402</p>
+                    <p><FaYoutube size={30} /> Alzhaffron Indonesia</p>
+                    <p><FaInstagram size={30} /> Alzhaffron Indonesia</p>
                 </div>
 
             </section>
